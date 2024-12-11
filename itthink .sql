@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 11, 2024 at 02:51 PM
+-- Generation Time: Dec 11, 2024 at 04:07 PM
 -- Server version: 9.1.0
 -- PHP Version: 8.1.10
 
@@ -98,17 +98,18 @@ CREATE TABLE `projets` (
   `descreption` text NOT NULL,
   `id_categorie` int NOT NULL,
   `id_sous_categorie` int NOT NULL,
-  `id_utilisateur` int NOT NULL
+  `id_utilisateur` int NOT NULL,
+  `date_creation` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `projets`
 --
 
-INSERT INTO `projets` (`id_projet`, `titre_project`, `descreption`, `id_categorie`, `id_sous_categorie`, `id_utilisateur`) VALUES
-(1, 'Site Web E-commerce', 'Développement d’un site web pour une boutique en ligne', 1, 1, 1),
-(2, 'Application Mobile', 'Développement d’une application mobile pour une entreprise', 3, 4, 2),
-(3, 'Design de logo', 'Création d’un logo pour une startup', 2, 3, 3);
+INSERT INTO `projets` (`id_projet`, `titre_project`, `descreption`, `id_categorie`, `id_sous_categorie`, `id_utilisateur`, `date_creation`) VALUES
+(1, 'Site Web E-commerce', 'Développement d’un site web pour une boutique en ligne', 1, 1, 1, '2024-01-01'),
+(2, 'Application Mobile', 'Développement d’une application mobile pour une entreprise', 3, 4, 2, '2024-01-01'),
+(3, 'Design Graphique', 'design des choses', 2, 3, 3, '2024-01-01');
 
 -- --------------------------------------------------------
 
@@ -151,8 +152,7 @@ CREATE TABLE `temoignages` (
 
 INSERT INTO `temoignages` (`id_temoignage`, `commentaire`, `id_utilisateur`) VALUES
 (1, 'Excellente plateforme, très réactive et efficace.', 1),
-(2, 'Les projets sont très intéressants, j’ai beaucoup appris.', 2),
-(3, 'Une expérience agréable, j’ai pu travailler avec des clients très sympas.', 3);
+(2, 'Les projets sont très intéressants, j’ai beaucoup appris.', 2);
 
 -- --------------------------------------------------------
 
