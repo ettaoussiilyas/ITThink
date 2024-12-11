@@ -112,7 +112,30 @@ VALUES
 ('Les projets sont très intéressants, j’ai beaucoup appris.', 2),
 ('Une expérience agréable, j’ai pu travailler avec des clients très sympas.', 3);*/
 
-#USE itthink;
+#adding column
+
+#ALTER TABLE projets ADD date_creation DATE ;
+#UPDATE projets SET date_creation = '2024-01-01' WHERE date_creation IS NULL;
+#SELECT * FROM projets ;
+
+
+#update
+
+#SELECT * FROM projets;
+#UPDATE projets SET titre_project='Design Graphique' , descreption='design des choses' WHERE id_projet=3;
 #update freelances SET nom_freelance= 'samid ghilan' WHERE id_freelance=1
 #SELECT * FROM freelances
 #UPDATE freelances SET nom_freelance= 'amal sghir' WHERE id_freelance=3
+
+#delate
+
+/*SELECT * FROM temoignages;
+DELETE FROM temoignages WHERE commentaire LIKE '%Une%';
+SELECT * FROM temoignages;*/
+
+#jointure
+
+/*SELECT * FROM projets INNER JOIN categories ON projets.id_categorie = categories.id_categorie WHERE categories.id_categorie=1  ;
+SELECT * FROM projets INNER JOIN categories ON prjets.id_categorie = categories.id_categorie ;
+SELECT * FROM categories;
+SELECT * FROM projets;*/
